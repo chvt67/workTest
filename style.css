@@ -1,3 +1,320 @@
-h1{
-    color: rgb(0, 255, 255);
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Slackey&display=swap');
+
+
+body{
+    overflow-x: hidden;
+    background-color: #ebebeb;
+    overflow: hidden;
+}
+/* ****************************************************************************************************** */
+/* HEADER  */
+header{
+    background: url("assets/vert.jpg") center/cover;
+    border: 1px solid #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .logo{
+    flex-basis: 10%;
+    display: flex;
+    justify-content: center;
+    
+}
+header .logo img{
+    width: 140px;
+}
+header .entete {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 30%;   
+}
+.entete h1{
+    color: #01a401;
+    font-family: "Slackey", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.1rem;
+    margin: 30px 10px 0 10px;
+    border-top: 3px solid ;
+    border-bottom: 3px solid ;
+    font-size: clamp(1.3rem, 2.8vw, 2.3rem);
+    
+}
+.entete h1:hover{
+    color: #a44a01;
+}
+.entete h2{
+    margin: 0 10px 30px 10px;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+/* ************************************************************************************************************************ */
+/* NAV  */
+nav{
+    flex-basis: 45%;
+}
+nav .navbar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+nav .navbar a{
+    text-decoration: none;
+    margin: 5px 25px;
+    font-weight: bold;
+    padding: 10px;
+    color: black;
+    text-decoration: overline 4px #01a401 ;
+    line-height: 60px;
+    transition: 0.5s;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    
+}
+nav .navbar a:hover{
+    transform: scale(1.1); 
+    text-decoration: overline 4px #a44a01 ;
+}
+.icogest{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-basis: 15%;
+}
+.icons i{
+    position: relative;
+    top: 8px;
+    font-size: 2.8rem;
+    padding: 10px 10px 30px 0px;
+    transition: 0.5s;
+}
+.icons i:hover{
+    transform: scale(1.1);
+    cursor: pointer;  
+    color: #a44a01 ;
+}
+header .geste{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+header .geste:hover{
+    color: #a44a01;
+    transform: scale(1.1);
+    cursor: pointer;
+    transform: rotate(5deg);
+}
+
+/* ************************************************************************************************** */
+/* SECTION ANIMAT BARRE HORIZONTAL  */
+.animat{
+    width: 100%;
+}
+.animat .soon{
+    width: 100%;
+    height: 22px;
+    border : 1px solid #000; 
+    background-color: gold;
+    margin: 5px auto;
+    background: linear-gradient(RGBa(143, 132, 114, 0.8), RGBa(143, 132, 214, 0.1));
+}
+.animat .logos{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 5px;
+    position: relative;
+    display: inline; 
+    
+    animation-name: chgt-couleur; 
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes chgt-couleur{
+    0% {color:  #000; left: 1%;}
+    100%{color:  #01a401; left: 91%;}
+}
+
+/* **************************************************************************************************** */
+/* SECTION PHOTOS ET ACTUS  */
+.container .pictures{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.container .pictures .image{
+    width: 16%;
+    height: 320px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+.container .pictures .image img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    transition: 0.5s;
+}
+.container .pictures .description{
+    transform: translateY(350px);
+    background: #ebebeb;
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 0.5rem;
+}
+.container .pictures .description h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.container .pictures .description p{
+    font-size: 14px;
+    
+}
+.container .pictures .image:hover .description{
+    transform: translateY(-120px);
+}
+.container .pictures .image:hover img{
+    transform: translateY(-120px);
+}
+.container .actpub .actu{
+    height: 190px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    /* border-radius: 1rem; */
+    overflow: auto;
+    flex-basis: 50%; 
+    border-right: 3px solid #01a401;
+    border-left: 3px solid #01a401;
+}
+.actpub{
+    display: flex;
+    justify-content: center;
+    margin: 20px; 
+    
+}
+.actpub .actu .act{
+    padding: 5px;
+    font-size: clamp(0.5rem, 2.5vw, 1rem);
+    margin-right: 10px;
+    
+}
+.actpub .actu h1{
+    margin-top: 0px;
+    border-bottom: 1px solid #01a401;    
+}
+.actpub .actu p{
+   text-align: justify;
+   
+}
+.container .actpub .pub{
+    height: 190px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    background-color: #fff;
+    border: 1px solid black;
+    flex-basis: 50%;
+    /* border-radius: 1rem; */
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-right: 3px solid #01a401;
+    border-left: 3px solid #01a401;
+    background: url("https://femmedinfluence.fr/wp-content/uploads/2016/11/fdt-hydratants-cover.jpg");
+    background-size: contain;
+    transition: 0.5s;
+}
+.container .actpub .pub:hover{
+    
+    transform: scale(1.1);
+}
+.actpub .pub p{
+    height: 60%;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #01a401;
+}
+
+
+/* **************************************************************** */
+/* FOOTER  */
+footer{
+    position: relative;
+}
+footer::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("assets/vert.jpg") center/cover;
+    transform: rotate(180deg); 
+    z-index: -1;
+}  
+.footers{
+    border: 1px solid #000;
+    width: 100%;
+    height: 100px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center; 
+}
+.footers .droit{
+    text-align: center;
+    font-weight: bold;
+}
+.footers .droit span{
+    color: #a44a01;
+}
+.footers .geste{
+    border: 1px solid black;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.footers .geste:hover{
+    color: #a44a01;
+    transform: scale(1.1);
+    cursor: pointer;
+    transform: rotate(5deg);
+}
+.footers .rens{
+    border: 1px solid black;
+    padding: 8px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.footers .rens:hover{
+    color: #a44a01;
+    transform: scale(1.1);
+    cursor: pointer;
+    transform: rotate(5deg);
 }
