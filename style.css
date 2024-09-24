@@ -9,6 +9,7 @@ body{
 }
 /* ****************************************************************************************************** */
 /* HEADER  */
+/* image fond du header  */
 header{
     background: url("assets/vert.jpg") center/cover;
     border: 1px solid #000;
@@ -18,6 +19,7 @@ header{
     align-items: center;
     flex-wrap: wrap;
 }
+/* logo terre lvda  */
 header .logo{
     flex-basis: 10%;
     display: flex;
@@ -155,7 +157,8 @@ header .geste:hover{
 }
 .container .pictures .image{
     width: 16%;
-    height: 320px;
+    /* height: 320px; */
+    aspect-ratio: 16 / 17;
     border-radius: 0.5rem;
     overflow: hidden;
     position: relative;
@@ -302,7 +305,7 @@ footer::before{
     color: #a44a01;
     transform: scale(1.1);
     cursor: pointer;
-    transform: rotate(5deg);
+    transform: rotate(-5deg);
 }
 .footers .rens{
     border: 1px solid black;
@@ -317,4 +320,158 @@ footer::before{
     transform: scale(1.1);
     cursor: pointer;
     transform: rotate(5deg);
+}
+
+/* **************************************************************** */
+/*MEDIA QUERIES  */
+/* titre h1 */
+@media  screen and (max-width: 1860px) {
+    .entete h1{
+        font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+        transition: 1s;
+    }
+    nav .navbar a{
+        font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+        margin: 5px 20px;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width: 1690px) {
+    @keyframes chgt-couleur{
+        0% {color:  #000; left: 1%;}
+        100%{color:  #01a401; left: 88%;}
+    }
+}
+@media screen and (max-width: 1551px) {
+    .entete h1, h2{
+        font-size: clamp(1.3rem, 2.8vw, 1.7rem);
+        transition: 1s;
+    }
+    nav .navbar a{
+        margin: 5px 10px; 
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width: 1420px) {
+    header{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 90px) ;
+        transition: 1s;
+    }
+    header .logo img{
+        width: 120px;
+        height: 90px;
+    }
+    header .entete{
+        grid-column: 2/ span 2;
+        display: flex;
+        flex-direction: column;
+    }
+    header nav{
+        grid-column: 1/ span 2;
+        margin: 5px 8px;
+    }  
+}
+@media screen and (max-width: 1256px) {
+    @keyframes chgt-couleur{
+        0% {color:  #000; left: 1%;}
+        100%{color:  #01a401; left: 83%;}
+}
+@media screen and (max-width: 900px) {
+    @keyframes chgt-couleur{
+        0% {color:  #000; left: 1%;}
+        100%{color:  #01a401; left: 78%;}
+}
+}
+@media screen and (max-width: 910px) {
+    .entete h1, h2{
+        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+        transition: 1s;
+    }
+    nav .navbar a{
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
+        margin: 3px 3px;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width: 683px) {
+    header .logo img{
+        width: 90px;
+        height: 65px;
+        transition: 1s;
+    }
+    header nav .navbar{
+        display: grid;
+        grid-template-columns: repeat(2, 140px);
+        grid-template-rows: repeat(2, 45px);
+        transition: 1s;
+        place-items: center;
+        transition: 1s;  
+    }
+    header .icogest .icons i{
+        font-size: 2rem;
+        padding: 1px;
+        margin-bottom: 15px;
+    }
+    header .geste{
+        font-weight: 0;
+        padding: 8px;
+        margin-bottom: 16px;
+    }
+    @keyframes chgt-couleur{
+        0% {color:  #000; left: 1%;}
+        100%{color:  #01a401; left: 73%;}
+    
+    }
+}
+@media screen and (max-width: 560px) {
+    @keyframes chgt-couleur{
+        0% {color:  #000; left: 1%;}
+        100%{color:  #01a401; left: 66%;}
+}
+}
+@media screen and (max-width: 510px) {
+    header .icogest{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+    }
+    header nav .navbar{
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+    } 
+}
+@media screen and (max-width: 445px){
+    .entete h1{
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        transition: 1s;
+    }
+    .entete h2{
+        margin: 0 10px 30px 10px;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+    
+        @keyframes chgt-couleur{
+            0% {color:  #000; left: 1%;}
+            100%{color:  #01a401; left: 55%;}
+    }
+    
+}
+    @media screen and (max-width: 345px){
+    header .geste{
+        padding: 2px;
+        font-size: 0.9rem;
+    }
+    .entete h1{
+        font-size: clamp(0.7rem, 2vw, 1rem);
+        transition: 1s;
+    }
+    @keyframes chgt-couleur{
+        0% {color:  #000; left: 1%;}
+        100%{color:  #01a401; left: 47%;}
+}
 }
