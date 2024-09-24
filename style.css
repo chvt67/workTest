@@ -380,6 +380,7 @@ footer::before{
         0% {color:  #000; left: 1%;}
         100%{color:  #01a401; left: 83%;}
 }
+}
 @media screen and (max-width: 900px) {
     @keyframes chgt-couleur{
         0% {color:  #000; left: 1%;}
@@ -431,7 +432,7 @@ footer::before{
     @keyframes chgt-couleur{
         0% {color:  #000; left: 1%;}
         100%{color:  #01a401; left: 66%;}
-}
+    }
 }
 @media screen and (max-width: 510px) {
     header .icogest{
@@ -458,10 +459,9 @@ footer::before{
         @keyframes chgt-couleur{
             0% {color:  #000; left: 1%;}
             100%{color:  #01a401; left: 55%;}
-    }
-    
+    }   
 }
-    @media screen and (max-width: 345px){
+@media screen and (max-width: 345px){
     header .geste{
         padding: 2px;
         font-size: 0.9rem;
@@ -473,5 +473,5 @@ footer::before{
     @keyframes chgt-couleur{
         0% {color:  #000; left: 1%;}
         100%{color:  #01a401; left: 47%;}
-}
+    }
 }
